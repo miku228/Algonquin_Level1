@@ -1,0 +1,52 @@
+body, .btn {
+    font-size: 20pt;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 5px minmax(100px, 1fr) 5px;
+    grid-gap: 5px;
+    padding: 5px;
+    grid-template-areas:
+    'left display right'
+    'left keypad  right';
+    justify-content: center;
+}
+
+.display {
+    grid-area: display;
+    background-color: cadetblue;
+    height: 60px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.grid-keybord {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-areas:
+    'keypad keypad keypad keypad'
+    'keypad keypad keypad keypad'
+    'keypad keypad keypad keypad';
+    justify-content: center;
+}
+
+
+.keypad {
+    grid-area: keypad;
+    background-color: aquamarine;
+}
+
+.btn {
+    font-size: 20pt;
+    background-color: darkcyan;
+    height: 40px;
+    border: solid black 1px;
+    border-radius: 5px;
+}

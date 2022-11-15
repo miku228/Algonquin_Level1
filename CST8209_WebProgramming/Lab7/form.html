@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <!-- ******* IMPORTANT ******READ PLEASE-->
+    <!-- Defer is used so as the script is executed when the page has finished parsing -->
+    <script src="scripts/validate.js" defer></script>
+    <script src="scripts/events.js" defer></script>
+    <link href="scripts/val.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h3>Profile Form</h3>
+    <form name="profile">
+
+          <label for="fName">First Name</label><br>
+          <input type="text" id="fName" name="firstName" autocomplete="off"><br>
+          <span class="alert" id="fNameError"></span><br><br>
+
+
+          <label for="lName">Last Name</label><br>
+          <input type="text" id="lName" name="lastName" autocomplete="off"><br>
+          <span class="alert" id="lNameError"></span><br><br>
+
+
+          <label for="address1">Address 1</label><br>
+          <input type="text" id="address1" name="address1" autocomplete="off"><br>
+          <span class="alert" id="address1Error"></span><br><br>
+
+
+          <label for="address2">Address 2</label><br>
+          <input type="text" id="address2" name="address2" autocomplete="off"><br>
+          <span class="alert" id="address2Error"></span><br><br>
+
+
+          <label for="city">City</label><br>
+          <input type="text" id="city" name="city" autocomplete="off"><br>
+          <span class="alert" id="cityError"></span><br><br>
+
+
+          <label for="province">Province</label>   <br>
+          <select id="province" name="province">
+            <option value="">Select Province</option>
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="YT">Yukon</option>
+          </select><br>
+          <span class="alert" id="provinceError"></span><br><br>
+
+
+          <label for="country">Country</label><br>
+          <select id="country" name="country">
+            <option value="">Select Country</option>
+            <option value="CA">Canada</option>
+            <option value="US">United States</option>
+            <option value="OTH">Other</option>
+          </select>  <br>
+          <span class="alert" id="countryError"></span><br><br>
+
+
+          <input type="submit" value="Submit">
+          <input type="reset">
+
+    </form>
+  </body>
+  </script>
+</html>

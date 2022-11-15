@@ -1,0 +1,50 @@
+1. put the SD card to computer
+    you can see boot folder
+
+2. download files(for mac 3 things)
+    - https://www.raspberrypi.com/software/operating-systems/
+      Raspberry Pi OS with desktop and recommended software
+      - this download takes about 10 min, after unzip it it only has disk img file
+    - https://www.balena.io/etcher/
+      use this when you want to flash SD file(when something wrong with your SD file)
+    - https://www.realvnc.com/en/connect/download/viewer/
+
+3. make conf file having wifi info
+   - you should figure out WPA or WPA2
+   - file name is 'wpa_supplicant.conf'
+   - write below in the conf file
+    country=CA
+    update_config=1
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    network={
+      ssid="YOURWIFINAME"
+      psk="YOURWIFIPASSWORD"
+      key_mgmt=WPA-PSK
+    }
+    or key_mgmt=WPA2-Enterprise
+
+
+4. move the conf file to your boot folder(SD file)
+
+5. make ssh file which not have extension to your boot folder
+    open terminal
+    command(2 lines) : cd /Volumes/boot
+                       touch ssh
+
+5. move out SD card from mac
+
+6. raspberryPi connect to power
+
+7. ping raspberrypi.local or ping raspberrypi
+    it shows returns if you're successfully connect
+
+8. ssh into raspberryPi
+  - command : ssh pi@raspberrypi.local
+  - need a password
+  - you can see the [pi@raspberrypi: ~$] in your terminal
+  - password command can change password to ssh connection
+
+9. update $ upgrade raspberryPi
+  - command : sudo apt-get update && apt-get upgrade -y
+
+10. 

@@ -1,0 +1,20 @@
+1. command
+  cd /etc/mysql/mariadb.conf.d/
+
+2. open 50-server.cnf
+  sudo nano 50-server.cnf
+
+3. change ip address of bind-address
+  bind-address            = 0.0.0.0
+
+4. restart mysql
+  sudo /etc/init.d/mysql restart
+
+5. recheck ip adress is changed
+  Netstat -aon | grep “3306"
+
+
+6. Setting mysql
+  - sudo mysql
+  - GRANT ALL PRIVILEGES ON *.* TO 'pi'@'%' IDENTIFIED BY 'Password';
+  - FLUSH PRIVILEGES;

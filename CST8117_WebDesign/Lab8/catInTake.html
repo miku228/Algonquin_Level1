@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="authur" content="Miku Abe">
+        <meta name="email" content="abe00004@algonquinlive.com">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="catintake.css">
+        <title>Cat Intake From</title>
+    </head>
+    <body>
+        <div class="grid-container">
+            <header>
+                <img src="images/fluffylogo(300X300).png" alt="happy cat logo">
+                <img id="coname" src="images/companyname(1113X300).jpg" alt="fluffy friends cat daycare">
+            </header>       
+            <nav>
+                <a href="index.html">HOME</a>
+            </nav>
+            <main class="grid-main">
+                <h1>
+                    Cat Intake Form
+                </h1>
+                <form name="catintake">
+                    <section class="float-left grid-formleft1">
+                        <section class="text-section sec">
+                            <label for="CatsName">Name of Cat</label>
+                            <input type="text" name="CatsName" id="CatsName" class="block" placeholder="Mr. Whiskers">
+                            <span class="alert" id="cNameError"></span>
+                        </section>
+                        <section>
+                            <label for="DaysNeeded" class="block">Days Needed</label>
+                            <div class="float-left">
+                                <label class="block" for="mon"> Mon. </label>
+                                <input type="checkbox" id="mon" name="mon" value="mon" checked>
+                            </div>
+                            <div class="float-left">
+                                <label class="block" for="tue"> Tue. </label>
+                                <input type="checkbox" id="tue" name="tue" value="tue">
+                            </div>
+                            <div class="float-left">
+                                <label class="block" for="wed"> Wed. </label>
+                                <input type="checkbox" id="wed" name="wed" value="wed">
+                            </div>
+                            <div class="float-left">
+                                <label class="block"  for="thu"> Thu. </label>
+                                 <input type="checkbox" id="thu" name="thu" value="thu">
+                            </div>
+                            <div class="float-left">
+                                <label class="block"  for="fri"> Fri. </label>
+                                <input type="checkbox" id="fri" name="fri" value="fri">
+                            </div>
+                            <div class="float-left">
+                                <label class="block"  for="sat"> Sat. </label>
+                                <input type="checkbox" id="sat" name="sat" value="sat" disabled>
+                            </div>
+                            <div class="float-left">
+                                <label class="block"  for="sun"> Sun. </label>
+                                <input type="checkbox" id="sun" name="sun" value="sun" disabled>
+                            </div>
+                        </section>
+                        <section class="clear">
+                            <section class="float-left sec">
+                                <label for="atime">Time Arrive</label>
+                                <input type="text" name="atimetxt" id="atimetxt" class="block"
+                                list="atimelist" placeholder="9:30 AM"
+                                autocomplete="off">  
+                                <datalist id="atimelist">
+                                    <option value="06:00AM">
+                                    <option value="06:30AM">
+                                    <option value="07:00AM">
+                                    <option value="07:30AM">
+                                    <option value="08:00AM">
+                                    <option value="08:30AM">
+                                    <option value="09:00AM">
+                                    <option value="09:30AM">
+                                    <option value="10:00AM">
+                                    <option value="10:30AM">
+                                    <option value="11:00AM">
+                                    <option value="11:30AM">
+                                    <option value="12:00PM">
+                                </datalist>
+                                <span class="alert" id="atimeError"></span>
+                            </section>
+                            <section class="float-left">
+                                <label for="ltime">Time Leave</label>
+                                <input type="text" name="ltimetxt" id="ltimetxt" class="block"
+                                list="ltimelist" placeholder="4:30 PM"
+                                autocomplete="off" disabled>
+                                <datalist id="ltimelist">
+                                    <option value="10:00AM">
+                                    <option value="10:30AM">
+                                    <option value="11:00AM">
+                                    <option value="11:30AM">
+                                    <option value="12:00PM">
+                                    <option value="12:30PM">
+                                    <option value="13:00PM">
+                                    <option value="13:30PM">
+                                    <option value="14:00PM">
+                                    <option value="14:30PM">
+                                    <option value="15:00PM">
+                                    <option value="15:30PM">
+                                    <option value="16:00PM">
+                                    <option value="16:30PM">
+                                    <option value="17:00PM">
+                                    <option value="17:30PM">
+                                    <option value="18:00PM">
+                                </datalist>
+                                <span class="alert" id="ltimeError"></span>
+                            </section>
+                        </section>
+                        <section class="clear">
+                            <input type="checkbox" id="catSN" name="catSN" value="catSN">
+                            <label for="catSN">Cat Spayed/Neutered</label>
+                        </section>
+                        <section>
+                            <input type="checkbox" id="sdiet" name="sdiet" value="sdiet">
+                            <label for="catSN">Special Diet</label>
+                            <label for="ddescribe" id="ddescribelabel" class="disapper block">Describe Diet</label>
+                            <input type="text" name="ddescribe" id="ddescribe" class="disapper block" placeholder="Mr. Whiskers eats only live mice.">
+                            <span class="alert" id="ddescribeError"></span>
+                        </section>    
+                    </section>
+                    <section class="float-left grid-formcenter1">
+                        <label for="CatsAge">Age of Cat</label>
+                        <input type="number" name="CatsAge" id="CatsAge" class="block" min="0" value="0">
+                    </section>
+                    <section class="float-left grid-formright1">
+                        <label for="Tempartment" class="block">Temperament of Cat</label>
+                        <label for="friendly" class="block">
+                            <input type="radio" id="tempertment" name="tempertment" value="friendly" checked>
+                            Friendly
+                        </label>
+                        <label for="sleepy" class="block">
+                            <input type="radio" id="sleepy" name="tempertment" value="sleepy" >
+                            Sleepy
+                        </label>
+                        <label for="independent" class="block">
+                            <input type="radio" id="independent" name="tempertment" value="independent">
+                            Independent
+                        </label>
+                        <label for="terrirotial" class="block">
+                            <input type="radio" id="terrirotial" name="tempertment" value="terrirotial">
+                            Terrirotial
+                        </label>
+                        <label for="dterrirotial" class="disapper block" id="dterritoriallabel">Describe Territorial</label>
+                        <input type="text" name="dterritorial" id="dterritorial" class="disapper block">
+                        <span class="alert" id="dterritorialError"></span>
+                    </section>                     
+                    <section class="float-left grid-formleft2">
+                        <section class="sec">
+                            <label for="ownersname" class="block">Owner's Name</label>
+                            <input type="text" name="ownersname" id="ownersname" class="block" placeholder="Cat Owner">
+                            <span class="alert" id="oNameError"></span>
+                        </section>
+                        <section class="sec">
+                            <label for="daytimephone" class="block">Daytime Phone</label>
+                            <input type="text" name="daytimephone" id="daytimephone" class="block" placeholder="(123) 456-7980">
+                            <span class="alert" id="daytimephoneError"></span>
+                        </section>
+                        <section class="sec">
+                            <label for="cellphone" class="block">Cell Phone</label>
+                            <input type="text" name="cellphone" id="cellphone" class="block" placeholder="(123) 456-7980">
+                            <span class="alert" id="cellphoneError"></span>
+                        </section>
+                        <section class="sec">
+                            <label for="email" class="block">Email</label>
+                            <input type="text" name="email" id="email" placeholder="catowner@fluffy.com">
+                            <span class="alert" id="emailError"></span>
+                        </section>
+                    </section>
+                    <section class="float-left grid-formcenter2">
+                        <p></p>
+                    </section>
+                    <section class="float-left grid-formright2">
+                        <section class="sec">
+                            <label for="emergctname" class="block">Emergency Contact Name</label>
+                            <input type="text" name="emergctname" id="emergctname" class="block" placeholder="Cat Friend">
+                            <span class="alert" id="emergctnameError"></span>
+                        </section>
+                        <section class="sec">
+                            <label for="ctphone" class="block">Contact Phone</label>
+                            <input type="text" name="ctphone" id="ctphone" class="block" placeholder="(123) 456-7980">
+                            <span class="alert" id="ctphoneError"></span>
+                        </section>
+                    </section>
+                    <input id="submitform" type="submit" value="Submit">
+                </form>
+                <img src="images/cat-3593013_192.jpeg" alt=" image of cat" class="imge">
+            </main>
+            <br><br><br/>
+            <footer>
+                <img src="images/PetDiversityPlusLogo.png" alt="log">
+                <img src="images/BBBcertified.png" alt="certified">
+                <address>
+                    123 Fluffy Street<br>
+                    Ottawa, Ontario
+                </address>
+                    (613) 123-CATS<br>
+                    <a href="mailto:fluffyfriends@catdaycare.ca?subject=inquiry%20from%20website">
+                        fluffyfriends@catdaycare.ca</a>             
+            </footer>
+        </div>
+        <script src="scripts/jquery-3.6.0.min.js"></script> 
+        <script src="scripts/events.js"></script> 
+    </body>
+</html>

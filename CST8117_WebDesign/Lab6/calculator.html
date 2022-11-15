@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- your meta data here -->
+    <meta name="authur" content="Miku Abe">
+    <meta name="email" content="abe00004@algonquinlive.com">
+    <style>
+        body, .btn {
+            font-size: 20pt;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 5px minmax(100px, 1fr) 5px;
+            grid-gap: 5px;
+            padding: 5px;
+            grid-template-areas:
+            'left display right'
+            'left keypad  right';
+            justify-content: center;
+        }
+
+        .display {
+            grid-area: display;
+            background-color: cadetblue;
+            height: 60px;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        .grid-keybord {
+            display: grid;
+            grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+            grid-gap: 10px;
+            padding: 10px;
+            grid-template-areas:
+            'keypad keypad keypad keypad'
+            'keypad keypad keypad keypad'
+            'keypad keypad keypad keypad';
+            justify-content: center;
+        }
+
+
+        .keypad {
+            grid-area: keypad;
+            background-color: aquamarine;
+        }
+
+        .btn {
+            font-size: 20pt;
+            background-color: darkcyan;
+            height: 40px;
+            border: solid black 1px;
+            border-radius: 5px;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <title>Very Simple Calculator</title>
+</head>
+<body>
+    <div class="calculator grid-container">
+    
+        <div class="display" id="result">0</div>
+    
+        <div class="keypad grid-keybord">
+            <!-- reformat button pad as needed -->
+            <button class="btn" onclick="display('7')">7</button>
+            <button class="btn" onclick="display('8')">8</button>
+            <button class="btn" onclick="display('9')">9</button>
+            <button class="btn" onclick="display('-')">-</button>
+            <button class="btn" onclick="display('4')">4</button>
+            <button class="btn" onclick="display('5')">5</button>
+            <button class="btn" onclick="display('6')">6</button>
+            <button class="btn" onclick="display('/')">/</button>
+            <button class="btn" onclick="display('1')">1</button>
+            <button class="btn" onclick="display('2')">2</button>
+            <button class="btn" onclick="display('3')">3</button>
+            <button class="btn" onclick="display('X')">X</button>
+            <button class="btn" onclick="display('0')">0</button>
+            <button class="btn" onclick="clearDis()">C</button>
+            <button class="btn" onclick="calculateDis()">=</button>
+            <button class="btn" onclick="display('+')">+</button>
+        </div>
+    
+    </div>
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+    <script>
+        // global variables
+        var el = document.getElementById("result")
+        var operands_inputlist = [];
+        var operator_inputlist = [];
+        var operators = ["+", "-", "/", "X"];
+        var displaynum = "";
+
+        // call when caluculate
+        function calculateList(list_nums, list2_ope) {
+            let calculate_result = parseFloat(list_nums[0])
+            for(let i = 1; i < list_nums.length; i++) {
+                if(list2_ope[i-1] == "X") {
+                    calculate_result =  calculate_result * parseFloat(list_nums[i])
+                    continue
+                }else if (list2_ope[i-1] == "/") {
+                    calculate_result =  calculate_result / parseFloat(list_nums[i])
+                    continue
+                } else {
+                    calculate_result =  calculate_result + parseFloat(list2_ope[i-1] + list_nums[i])
+                }
+            }
+            // after calculate reset two lists for next calculate
+            list2_ope.shift()
+            list_nums = []
+            list_nums.push(calculate_result)
+            // display calculate result
+            el.innerHTML = calculate_result;
+            return [list_nums, list2_ope]
+
+        }
+
+
+        // clear the display
+        function clearDis() {
+            el.innerHTML = "0";
+            operands_inputlist = [];
+            operator_inputlist = [];
+            displaynum = "";
+        };
+
+        // get input and display
+        function display(input) {
+            // when input is a number
+            if(!operators.includes(input)) {
+                displaynum += input;
+                el.innerHTML = displaynum;
+            
+            // when input is an operator
+            }else{
+                operands_inputlist.push(displaynum)
+                if(operator_inputlist.length >= 1) {
+                    // do calculate and display result
+                    result_list = calculateList(operands_inputlist, operator_inputlist)
+                    operands_inputlist = result_list[0];
+                    operator_inputlist = result_list[1];
+                }
+
+                operator_inputlist.push(input)
+                // reset variable for display
+                displaynum = ""
+            }
+
+        };
+
+        // "=" was clicked, then calucurate
+        function calculateDis() {
+            // push the display number to operands_inputlist
+            operands_inputlist.push(displaynum)
+            if(operands_inputlist.length != 0 && operator_inputlist.length != 0) {
+                // calculate result
+                calculateList(operands_inputlist, operator_inputlist);
+                // reset two lists
+                operands_inputlist = [];
+                operator_inputlist = [];
+            }
+        }
+    </script>
+</body>
+</html>
+

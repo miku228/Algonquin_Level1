@@ -1,0 +1,33 @@
+
+[
+  {
+    "name": "oranges",
+    "value": 3,
+    "imgPath":"images/oranges.png",
+    "imgRef": "https://www.shutterstock.com/image-photo/ripe-tangerines-grid-close-on-white-1209465301"
+  },
+  {
+    "name": "milk",
+    "value": 2,
+    "imgPath":"images/milk.png",
+    "imgRef": "https://www.shutterstock.com/image-vector/milk-gable-top-carton-close-cow-687543859"
+  },
+  {
+    "name": "bread",
+    "value": 3,
+    "imgPath":"images/bread.png",
+    "imgRef": "https://www.shutterstock.com/image-photo/sliced-white-bread-plastic-bag-1189927210"
+  },
+  {
+    "name": "eggs",
+    "value": 3,
+    "imgPath":"images/eggs.png",
+    "imgRef": "https://www.shutterstock.com/image-photo/few-brown-eggs-among-cells-large-2091021958"
+  },
+  {
+    "name": "chocolate",
+    "value": 4,
+    "imgPath":"images/chocolate.png",
+    "imgRef": "https://www.shutterstock.com/image-photo/milk-chocolate-bar-isolated-on-white-721577257"
+  }
+]

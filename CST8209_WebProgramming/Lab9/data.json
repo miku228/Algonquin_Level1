@@ -1,0 +1,38 @@
+{
+  "squadName" : "Cities I Traveled",
+  "homeTown" : "Yamagata, Japan",
+  "formed" : 2022,
+  "cities" : [
+    {
+      "name" : "Nürnberg　Germany",
+      "year" : 2005,
+      "State" : "Bavaria",
+      "info" : [
+        "515,543 people",
+        "186.46 km2",
+        "2,800 people/km2"
+      ]
+    },
+    {
+      "name" : "Salzburg Austria",
+      "year" : 2005,
+      "State" : "Salzburg",
+      "info" : [
+        "157,245 people",
+        "65.65 km2 ",
+        "2,400 people/km2"
+      ]
+    },
+    {
+      "name" : "Auckland New Zealand",
+      "year" : 2010,
+      "state" : "Auckland",
+      "info" : [
+        "1,463,000 people",
+        "607.10 km2",
+        "2,400 people/km2",
+        "North Island"
+      ]
+    }
+  ]
+}

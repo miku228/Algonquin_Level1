@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="authur" content="Miku Abe">
+    <meta name="email" content="abe00004@algonquinlive.com">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Online Supermarket</title>
+  </head>
+  <body>
+    <h1>Welcome to Online Supermarket</h1>
+    <p>Please input your infomation, then select things what you want to buy below table.</p>
+      <form class="" method="post" name="profile">
+        <section>
+          <fieldset>
+            <legend>First Name</legend>
+            <p>Please input more than 3 and less than 15 characters</p>
+            <p>
+              <input type="text" name="fname" placeholder="Input your FirstName">
+            </p>
+            <p>
+              <span class="alert" id="fnameError"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Last Name</legend>
+            <p>Please input more than 3 and less than 15 characters</p>
+            <p>
+              <input type="text" name="lname" placeholder="Input your LastName">
+            </p>
+            <p>
+              <span class="alert" id="lnameError"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Email</legend>
+            <p>
+              <input type="text" name="email" id="email" placeholder="online@supermarket.com">
+            </p>
+            <p>
+              <span class="alert" id="emailError"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Mobile/Phone</legend>
+            <p>Please input more than 9 and less than 15 numbers</p>
+            <p>
+              <input type="text" name="mobile" placeholder="123456789">
+            </p>
+            <p>
+              <span class="alert" id="mobileError"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Delevery Date</legend>
+            <p>Please input more than 3 days after today ex).2022-04-01</p>
+            <p>
+              <input type="text" name="ddate" id="ddate">
+            </p>
+            <p>
+              <span class="alert" id="ddateError"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Delevery Time</legend>
+            <p>
+              <p>Please select or input time</p>
+              <input type="text" name="dtime" id="dtime" class="block"
+              list="dtimelist" placeholder="10:00 AM"
+              autocomplete="off">
+              <datalist id="dtimelist">
+                <option value="10:00 AM">
+                <option value="10:30 AM">
+                <option value="11:00 AM">
+                <option value="11:30 AM">
+                <option value="12:00 PM">
+                <option value="12:30 PM">
+                <option value="01:00 PM">
+                <option value="01:30 PM">
+                <option value="02:00 PM">
+                <option value="02:30 PM">
+                <option value="03:00 PM">
+                <option value="03:30 PM">
+                <option value="04:00 PM">
+                <option value="04:30 PM">
+                <option value="05:00 PM">
+                <option value="05:30 PM">
+                <option value="06:00 PM">
+                <option value="06:30 PM">
+              </datalist>
+            </p>
+            <p>
+              <span class="alert" id="dtimeError"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Call Before Arrival</legend>
+            <p>
+              <input type="checkbox" id="bcall" name="bcall" value="bcall">
+              <label for="bcall">Yes</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Place that leave the package</legend>
+            <p>
+              <label for="fdoor">
+                  <input type="radio" id="fdoor" name="place" value="fdoor" checked>
+                  by the front door
+              </label>
+              <label for="bdoor">
+                  <input type="radio" id="bdoor" name="place" value="bdoor">
+                  by the back door
+              </label>
+              <label for="gdoor">
+                  <input type="radio" id="gdoor" name="place" value="gdoor">
+                  by the garage door
+              </label>
+              <span class="alert" id="placeError"></span>
+            </p>
+          </fieldset>
+        </section>
+        <section>
+          <label for="subtotal">Your total($CAD)</label>
+          <input type="text" name="subtotal" id="subtotal" disabled>
+        </section>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <section>
+          <p>Click + to add a item, click - to remove a item</p>
+          <table>
+          </table>
+        </section>
+      </form>
+      <script type="text/javascript" src="scripts/validation.js"></script>
+      <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>

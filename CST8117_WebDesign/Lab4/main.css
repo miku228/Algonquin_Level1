@@ -1,0 +1,108 @@
+#coname {
+    position: absolute;
+}
+
+nav, footer, nav a, footer a {
+    background-color: #133854;
+    color: white;
+    font-size: 18pt;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+}     
+
+section {
+    font-size: 20pt;
+}
+
+section img {
+    height: 200px;
+}
+
+section table {
+    table-layout: fixed;
+    width: 90%; 
+    border-collapse: collapse;
+    border: 2px solid gray;
+}
+
+section td, th {
+    border: 2px solid gray;
+    text-align: center;
+    padding: 15px;
+}
+
+section th {
+    background-color: #133854;
+    color: white;
+}
+
+section tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+section form {
+    text-align: center;
+}
+
+/* registration.html */
+form label {
+    margin-right: 5px;
+    text-align: right;
+    width: 400px;
+    float: left;
+}
+
+input[type="text"] {
+    /* text-align: right; */
+    width: 300px;
+}
+
+#checkSpecialDiet{
+    width: 600px;
+}
+
+#register {
+    clear: both;
+    width: 100px;
+}
+
+#contact {
+    text-align: center;
+}
+
+.list {
+    display: table-cell;
+}
+
+
+/* a class rightfloat */
+img.rightfloater {
+    float: right;
+    padding: 0 0 20px 20px;
+}
+
+/* a class leftfloat */
+img.leftfloater {
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+
+footer {
+    text-align: right;
+    padding: 10px;
+}
+
+footer img {
+    height: 35px;
+    padding-right: 10px;
+    float: left;
+}
+
+address {
+    font-style: normal;
+}
+
